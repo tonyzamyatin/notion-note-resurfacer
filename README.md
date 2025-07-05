@@ -1,22 +1,69 @@
-# Notion Random Note Generator #
-This integration allows you to randomly resurface old ideas from your Notion database (of any size), helping you to review them and understand them in a new way. It's inspired by the concept of serendipity from the book "Where Good Ideas Come from: The Natural History of Innovation" by Steven Johnson.
+# 📓 Notion Note Resurfacer
 
-## Motivation ##
-When you capture your ideas, notes, quotes, and resources in a hierarchical database like Notion, it's easy to get stuck in the same patterns of thinking and miss out on serendipitous connections between ideas. The ability to filter content further narrows your perspective and limits your creative output. The purpose of this script is to randomly bring back serendipity to your note taking system by resurfacing old ideas from your database and providing you with an opportunity to review them with fresh eyes.
+**Rediscover old insights, spark new ideas.**
+This simple script picks random notes from your Notion database to bring back serendipity into your knowledge system.
 
-## How to Use ##
-1. **Set up your Notion database**: Add a checkbox property called "Today's idea" to your database. This propterty will be used to mark the randomly selected pages.
+Inspired by the concept of **slow hunches** in *Where Good Ideas Come From* by Steven Johnson, this tool helps you revisit forgotten thoughts and make unexpected connections.
 
-2. **Create a Notion Integration**: Go to the Notion Developer page (https://developers.notion.com) and create a new integration following the instructions on the website. Make sure you grant it access to the database you want to connect to.
+---
 
-3. **Create a Pipedream workflow**: Sign up for a Pipedream account and create a new workflow following the instructions on the Pipedream website (https://pipedream.com). Set the workflow to execute at your preferred time (e.g. 5 AM every day) or choose any trigger of your liking.
+## 🧠 Motivation
 
-4. **Copy-paste the code**: When you set up your Pipedream workflow, copy-paste the code from the app.py file into the code box.
+Notion makes it easy to save lots of ideas. But over time, older notes get buried, and filters can limit your view.
+This script helps by randomly bringing back notes you already wrote. This way, you can see them with fresh eyes and find new inspiration.
 
-5. **Enter the necessary information**: Fill in the integration token, the database ID, and the number of pages you want to randomly retrieve. This information should be included at the top of the script.
+Inspired by the book *Where Good Ideas Come From* by Steven Johnson, it helps you revisit old thoughts and make new connections.
 
-6. **Retrieve pages**: In Notion, create a new database view with a filter for "Today's idea: checked" or just use a sort to make the marked pages appear at the top of your current database view.
+---
 
-7. **Customization**: You can customize the code as you like e.g. change the property name of "Today's idea" to something else, just make sure you change the property name everywhere in the code as well or the script won't work as desired.
+## 🧪 Example Use Case
+You maintain a Notion database of 1,000 ideas. Every morning, this script picks 3 at random and flags them. You open the filtered Feed view of you notion database and review them over coffee. Marking them as read when you're done to save space on your Notion page.
 
-That's it! With these simple steps, you'll be on your way to rediscovering old ideas and finding new inspiration in your Notion database.
+---
+
+## 🚀 Features
+
+* Works with any Notion database
+* No-code solution with minimal setup
+* Can be automated via [Pipedream](https://pipedream.com) or similar schedulers
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1. Configure your Notion database
+
+* Add a checkbox property called `"Today's idea"` (or choose your own).
+* This property will be toggled by the script.
+
+### 2. Create a Notion integration
+
+* Follow the official guide: [Create a Notion integration](https://developers.notion.com/docs/create-a-notion-integration)
+* Share your database with the integration so it has access.
+
+### 3. Automate with Pipedream (or run manually)
+
+* Follow the official Pipedream docs to [create a scheduled workflow](https://pipedream.com/docs/workflows/steps/triggers/#schedule-trigger).
+* Set it to run at your preferred time (e.g. daily at 5 AM).
+
+### 4. Set up the script
+
+* Open `script.py` and fill in the **four variables** at the top:
+
+  * `INTEGRATION_TOKEN`
+  * `NOTION_DATABASE_ID`
+  * `NUM_RANDOM_PAGES`
+  * `PROP_NAME`
+* That's it! You don't need to modify anything else.
+
+### 5. View resurfaced notes
+
+* In Notion, create a view with `Filter → "Today's idea" is checked`
+* Or use the new **"Feed" view** (available in the latest Notion versions) to scroll through resurfaced notes like a social media feed.
+* Tip: If you display the checkbox, you can uncheck notes after reading them to save space on your page.
+
+---
+
+## 📄 License
+
+MIT License. Use and modify freely.
