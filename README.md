@@ -1,7 +1,7 @@
 # 📓 Notion Note Resurfacer
 
 **Rediscover old insights, spark new ideas.**
-This simple script picks random notes from your Notion database to bring back serendipity into your knowledge system.
+This simple script resurfaces random notes from your Notion database to bring back serendipity into your knowledge system.
 
 Inspired by the concept of **slow hunches** in *Where Good Ideas Come From* by Steven Johnson, this tool helps you revisit forgotten thoughts and make unexpected connections.
 
